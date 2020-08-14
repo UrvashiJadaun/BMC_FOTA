@@ -21,7 +21,7 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import com.bms.model.NtpcKafka;
 import com.bms.model.PublishedDataPayloadParam;*/
 
-@Configuration
+//@Configuration
 public class KakfaConfiguration {
 
 	// kafka consumer configuation
@@ -47,6 +47,10 @@ public class KakfaConfiguration {
 		return factory;
 	}
 
+	@Bean
+	public NewTopic topic4() {
+		return new NewTopic("FWA_exicom", 1000, (short) 3);
+	}
 	/*
 	 * @Bean public ProducerFactory<String, String> producerFactoryClient() {
 	 * Map<String, Object> config = new HashMap<>();
