@@ -15,4 +15,6 @@ public interface AssetsServiceAPI {
 
 	boolean exists(AssetEntity assetModel);
 
+	public boolean existsByImeiNo(long imei);
+
 }

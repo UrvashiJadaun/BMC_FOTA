@@ -38,15 +38,30 @@ public class AssetsServiceImpl implements AssetsServiceAPI {
 	@Override
 	public boolean exists(AssetEntity assetModel ) {
 		boolean  flag1,flag2,flag;
-		flag1 	=	 assetRepo.existsByImeiNo(assetModel.getImeiNo());
-		flag2	=	 assetRepo.existsByOrgId(assetModel.getOrgId());
+		System.out.println("Inside exists AssetsServiceImpl");
+		//AssetEntity entity=null;
 		
-		if(flag1==true && flag2==true)
-			flag=true;
-		else
-			flag=false;
-	return flag;
+		if(assetRepo.findByImeiNoAndOrgId(assetModel.getImeiNo(),assetModel.getOrgId()) != null)
+		{
+			 System.out.println("TRUE");
+			return true;
+		}
+		System.out.println("FALSE");
+		return false;
+		/*
+		 * flag1 = assetRepo.existsByImeiNo(assetModel.getImeiNo()); flag2 =
+		 * assetRepo.existsByOrgId(assetModel.getOrgId());
+		 * System.out.println("flag1 IMEI: "+flag1);
+		 * System.out.println("flag2 orgID: "+flag2); if(flag1==true && flag2==true)
+		 * flag=true; else flag=false; return flag;
+		 */
 		
+	}
+
+	@Override
+	public boolean existsByImeiNo(long imei) {
+		// TODO Auto-generated method stub
+		return assetRepo.existsByImeiNo(imei);
 	}
 
 	/*

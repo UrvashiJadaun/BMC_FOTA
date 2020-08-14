@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bms</groupId>
-	<artifactId>bms-phota</artifactId>
+	<artifactId>bms-fota</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bms-fota</name>
 	<description>Demo project for Spring Boot</description>
@@ -21,15 +21,7 @@
 	<dependencies>
 	   
 	   
-	   <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt</artifactId>
-			<version>0.9.1</version>
-		</dependency>
+	   
 	   
 	   
 	   

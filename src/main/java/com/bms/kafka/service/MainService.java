@@ -1,6 +1,6 @@
 package com.bms.kafka.service;
 
-import java.sql.Timestamp;
+//import java.sql.Timestamp
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bms.Entity.AssetEntity;
-import com.bms.model.t_batch;
-import com.bms.model.t_batch_details;
+//import com.bms.model.t_batch;
+//import com.bms.model.t_batch_details;
 import com.bms.service.AssetsServiceAPI;
 import com.bms.service.BatchDetailsServiceApi;
 import com.bms.service.BatchServiceApi;

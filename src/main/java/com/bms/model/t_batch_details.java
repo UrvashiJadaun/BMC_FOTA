@@ -33,6 +33,8 @@ public class t_batch_details {
 	
 	private Integer max_time;
 	
+	private long IMEI;
+	
 //	@JoinColumn(name = "batch_id")
 //	private t_batch t_batch;
 	private long batch_id;
@@ -45,7 +47,7 @@ public class t_batch_details {
 		this.batch_id = batch_id;
 	}
 
-	private long IMEI;
+	
 	
 
 	/*
