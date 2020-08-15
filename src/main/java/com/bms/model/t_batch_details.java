@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
-//@Table(schema = "public", name = "t_batch_details_")
+@Table(schema = "public", name = "t_batch_details")
 @Entity
 public class t_batch_details {
 	
@@ -54,16 +54,18 @@ public class t_batch_details {
 	 * public void setT_batch(t_batch t_batch) { this.t_batch = t_batch; }
 	 */
 
+
+
+	public String getTCL_version() {
+		return TCL_version;
+	}
+
 	public long getsNo() {
 		return sNo;
 	}
 
 	public void setsNo(long sNo) {
 		this.sNo = sNo;
-	}
-
-	public String getTCL_version() {
-		return TCL_version;
 	}
 
 	public void setTCL_version(String tCL_version) {

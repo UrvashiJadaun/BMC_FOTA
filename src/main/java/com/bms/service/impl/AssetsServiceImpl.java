@@ -1,15 +1,15 @@
 package com.bms.service.impl;
 
-import java.text.SimpleDateFormat;import java.util.ArrayList;
-import java.util.Date;
+/*import java.text.SimpleDateFormat;import java.util.ArrayList;import java.util.Date;*/
 import java.util.List;
-import java.util.Optional;
+/*import java.util.Optional;
 
-import org.modelmapper.ModelMapper;
+import org.modelmapper.ModelMapper;*/
 import org.springframework.beans.factory.annotation.Autowired;
+/*import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort;*/
 import org.springframework.stereotype.Service;
 
 import com.bms.Entity.AssetEntity;
@@ -35,5 +35,23 @@ public class AssetsServiceImpl implements AssetsServiceAPI {
 		return assetRepo.findAll();
 	}
 
+	@Override
+	public boolean exists(AssetEntity assetModel ) {
+		boolean  flag1,flag2,flag;
+		flag1 	=	 assetRepo.existsByImeiNo(assetModel.getImeiNo());
+		flag2	=	 assetRepo.existsByOrgId(assetModel.getOrgId());
+		
+		if(flag1==true && flag2==true)
+			flag=true;
+		else
+			flag=false;
+	return flag;
+		
+	}
+
+	/*
+	 * @Override public List<AssetEntity> findAllAssets() {
+	 * System.out.println("Inside AssetsServiceImpl"); return assetRepo.findAll(); }
+	 */
 	
 }

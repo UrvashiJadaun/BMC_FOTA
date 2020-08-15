@@ -2,29 +2,41 @@ package com.bms.model;
 
 import java.sql.Timestamp;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-//@Table(schema = "public", name = "t_batch_")
+@Table(schema = "public", name = "t_batchh")
 @Entity
 public class t_batch {
 
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long batch_id;
+	
+	private String usr;
+	//private String user;
 	
 	private String batch_org_name;
 	
+	public String getUsr() {
+		return usr;
+	}
+
+	public void setUsr(String usr) {
+		this.usr = usr;
+	}
+
 	private long count;
 	
 	private Timestamp start_date;
 	
 	private Timestamp end_date;
 	
-	private String user;
+	//private String user;
 	
 	private String description;
 	
@@ -32,6 +44,12 @@ public class t_batch {
 	
 	private String execute;
 
+	/*
+	 * public String getUser() { return user; }
+	 * 
+	 * public void setUser(String user) { this.user = user; }
+	 */
+	
 	public long getBatch_id() {
 		return batch_id;
 	}
@@ -72,13 +90,11 @@ public class t_batch {
 		this.end_date = end_date;
 	}
 
-	public String getUser() {
-		return user;
-	}
-
-	public void setUser(String user) {
-		this.user = user;
-	}
+	/*
+	 * public String getUser() { return user; }
+	 * 
+	 * public void setUser(String user) { this.user = user; }
+	 */
 
 	public String getDescription() {
 		return description;
